@@ -1,4 +1,4 @@
 root: ./teste-git2
-structure: summary.md
-readme: readme.md
-assets: teste-git2/processes
+structure:
+  readme: introduction-to-platform.md
+  assets: teste-git2/processes
