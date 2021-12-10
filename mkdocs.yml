@@ -1,0 +1,724 @@
+# Project information
+site_name: 'Documentação 4biz'
+site_description: 'Documentação dos produtos Run2biz 4biz'
+site_author: 'Run2biz comporation'
+site_url: 'https://docs.run2biz.com/pt-br/index.html'
+
+# Repository
+#repo_name: 'citsmart/docs'
+#repo_url: 'https://github.com'
+
+# Copyright
+copyright: 'Copyright &copy; 2020 Run2biz'
+
+# Configuration
+theme:
+  name: material
+  custom_dir: theme
+  static_templates:
+  - 'home.html'
+  - 'get_started.html'
+  - 'platform.html'
+  - 'builder.html'
+
+  # Default values, taken from mkdocs_theme.yml
+  language: pt
+  palette:
+    primary: light blue
+    accent: deep orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/images/run2biz-logo.png
+  favicon: assets/images/favicon.ico
+  feature:
+    tabs: true
+
+# Extra CSS
+extra_css:
+  - 'assets/stylesheets/extra-docs.css'
+  - 'assets/stylesheets/home.css'
+
+# Plugins
+plugins:
+    - search:
+        lang: pt
+
+# Customization
+extra:
+  social:
+    - type: 'twitter'
+      link: 'http://www.twitter.com/run2biz'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/Run2biz-Brasil-100181464932640'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/run2biz-brasil'
+
+#hidden: ['Home', 'MailUs']
+#nav_right: ['About', 'Contact']
+
+# Google Analytics
+google_analytics:
+  - 'G-D4V4C1MWGL'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Generate page .html
+use_directory_urls: false
+
+# Nav tree
+nav:
+- Início:
+  - 'https://docs.run2biz.com/pt-br/home.html'
+- 4biz Helium:
+  - Iniciar:
+    - Sobre o 4biz:
+      - index.md
+      - 4biz-helium/get-started/about-4biz/whats-4biz.md
+      - 4biz-helium/get-started/about-4biz/introduction-to-platform.md
+      - 4biz-helium/get-started/about-4biz/release-policy.md
+      - 4biz-helium/get-started/about-4biz/release-notes.md
+    - Arquitetura:
+      - 4biz-helium/get-started/architecture/architecture.md
+      #- 4biz-helium/get-started/architecture/on-premise.md
+      - 4biz-helium/get-started/architecture/operational-limits.md
+    - Instalação e atualização:
+      - 4biz-helium/get-started/installation-and-upgrade/overview.md
+      - 4biz-helium/get-started/installation-and-upgrade/system-requirements.md
+#      - 4biz-helium/get-started/installation-and-upgrade/download-software.md
+#      - 4biz-helium/get-started/installation-and-upgrade/perform-installation.md
+      - Realizar instalação:
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/start-install.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/install-jdk.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/install-wildfly.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/conf-java-for-wildfly.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/include-wildfly-systemd.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/conf-server.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/conf-datasource-and-db.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/conf-wildfly.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/conf-extras.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/install-certificate.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/install-apache-solr.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/install-mongo.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/deploy-4biz.md
+        - 4biz-helium/get-started/installation-and-upgrade/perform-installation/setup-4biz.md
+      # - 4biz-helium/get-started/installation-and-upgrade/prepare-for-upgrade.md
+      # - 4biz-helium/get-started/installation-and-upgrade/run-update.md
+      -  4biz-helium/get-started/installation-and-upgrade/update-4biz.md
+  - Configurações iniciais:
+    - 4biz-helium/initial-settings/navigation-and-user-interface.md
+    - Configuração básica:
+      - 4biz-helium/initial-settings/introduction.md
+#      - 4biz-helium/initial-settings/set-language-and-location.md
+      - 4biz-helium/initial-settings/set-system-url.md
+    - Configuração de acesso:
+      - Perfil:
+        - 4biz-helium/initial-settings/access-settings/profile/create-profile-access.md
+        - 4biz-helium/initial-settings/access-settings/profile/smart-decision.md
+      - Usuário:
+        - 4biz-helium/initial-settings/access-settings/user/register-employee.md
+        - 4biz-helium/initial-settings/access-settings/user/users.md
+        - 4biz-helium/initial-settings/access-settings/user/user-data.md
+        - 4biz-helium/initial-settings/access-settings/user/position.md
+        - 4biz-helium/initial-settings/access-settings/user/register-groups.md
+    - Painel do usuário:
+      - 4biz-helium/initial-settings/user-panel/home-panel.md
+      - 4biz-helium/initial-settings/user-panel/register-menu.md
+  - Recomendações de segurança:
+    - 4biz-helium/security-recommendation/security-recommendation.md
+  - Administração da Plataforma:
+    - Introdução:
+      - 4biz-helium/platform-administration/introduction.md
+    - Autenticação:
+      - 4biz-helium/platform-administration/authentication/overview.md
+      - 4biz-helium/platform-administration/authentication/oauth2-authentication-using-keycloack.md
+      - 4biz-helium/platform-administration/authentication/ldap.md
+      - 4biz-helium/platform-administration/authentication/sso.md
+      - 4biz-helium/platform-administration/authentication/okta.md
+    - Segurança:
+      - 4biz-helium/platform-administration/security/implement-password-security-rules.md
+      - 4biz-helium/platform-administration/security/reset-password.md
+      - 4biz-helium/platform-administration/security/user-unlock-requirement.md
+    - Tempo:
+      - 4biz-helium/platform-administration/time/create-calendar.md
+      - 4biz-helium/platform-administration/time/create-cycle.md
+      - 4biz-helium/platform-administration/time/create-working-day.md
+    - Região e idioma:
+      - 4biz-helium/platform-administration/region-and-language/load-countries.md
+      - 4biz-helium/platform-administration/region-and-language/register-locations.md
+      - 4biz-helium/platform-administration/region-and-language/register-unit.md
+      - 4biz-helium/platform-administration/region-and-language/standard-language.md
+#     - 4biz-helium/platform-administration/region-and-language/timezone.md
+      - 4biz-helium/platform-administration/region-and-language/type-of-unit.md
+    - Dados e importação:
+      - 4biz-helium/platform-administration/data-and-import/employee-import.md
+      - 4biz-helium/platform-administration/data-and-import/general-import.md
+      - 4biz-helium/platform-administration/data-and-import/metadata-load.md
+      - 4biz-helium/platform-administration/data-and-import/portfolio-import-service-portfolio.md
+      - 4biz-helium/platform-administration/data-and-import/spreadsheet-employee.md
+      - 4biz-helium/platform-administration/data-and-import/spreedsheet-import-portfolio.md
+    - Banco de dados:
+      - 4biz-helium/platform-administration/database/data-management.md
+      - 4biz-helium/platform-administration/database/import-data-import-management.md
+#      - 4biz-helium/platform-administration/database/load-metadata.md
+      - 4biz-helium/platform-administration/database/register-data-import.md
+      - 4biz-helium/platform-administration/database/register-external-connections.md
+      - 4biz-helium/platform-administration/database/run-script.md
+      - 4biz-helium/platform-administration/database/script-database-tool.md
+    - Configuração de ambiente:
+      - 4biz-helium/platform-administration/environment-configuration/banner-logo.md
+      - 4biz-helium/platform-administration/environment-configuration/knowledge-portal-configure-filtres.md
+      - 4biz-helium/platform-administration/environment-configuration/knowledge-portal-customize-knowledge-portal.md
+      - 4biz-helium/platform-administration/environment-configuration/system-configure-enviroment.md
+      - 4biz-helium/platform-administration/environment-configuration/system-customization.md
+    - Parâmetros:
+      - 4biz-helium/platform-administration/parameters-list/configuration-parametrization-mobile.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-change.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-chat.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-configuration.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-email.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-knowledge.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-ldap.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-problem.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-release.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-smart-portal.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-system.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-telephony.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-ticket.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-voip.md
+      - 4biz-helium/platform-administration/parameters-list/configure-parametrization-work-order.md
+    - Customizar campos:
+      - 4biz-helium/platform-administration/customizable-fields/label-customize-system.md
+      - 4biz-helium/platform-administration/customizable-fields/labels-configure-mandatory-fields.md
+      - 4biz-helium/platform-administration/customizable-fields/register-domain-item.md
+      - 4biz-helium/platform-administration/customizable-fields/register-domain.md
+    - Indexação de dados:
+      - 4biz-helium/platform-administration/data-indexing/configuration.md
+    - Configuração de e-mail:
+      - 4biz-helium/platform-administration/email-settings/configuration.md
+      - 4biz-helium/platform-administration/email-settings/email-templates-configure-email-template.md
+      - 4biz-helium/platform-administration/email-settings/register-mail-box.md
+    - Chaves de E-mail:
+      - 4biz-helium/platform-administration/email-settings/key-field/key-fields-change-email.md
+      - 4biz-helium/platform-administration/email-settings/key-field/knowledge-base-email.md
+      - 4biz-helium/platform-administration/email-settings/key-field/problem-email.md
+      - 4biz-helium/platform-administration/email-settings/key-field/resquest-email-key.md
+    - Questionários:
+      - 4biz-helium/platform-administration/questionnaires/questionaires-management/questionnaire-category.md
+      - 4biz-helium/platform-administration/questionnaires/questionaires-management/questionnaires-management.md
+      - 4biz-helium/platform-administration/questionnaires/questionaires-management/register-questionnaire.md
+      - 4biz-helium/platform-administration/questionnaires/ticket-template.md
+    - Configurar ações automáticas:
+      - Processamento Batch:
+        - 4biz-helium/platform-administration/configuring-automatic-actions/batch-batch-processing.md
+      - Cadastrar ação automática:
+        - 4biz-helium/platform-administration/configuring-automatic-actions/email-create-automatic-action-via-email.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/notification-create.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/problem-automatic-action.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/register-automatic-action.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/register-automatic-actions-incident-request-procedure.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/register-change-automatic-actions.md
+        - 4biz-helium/platform-administration/configuring-automatic-actions/register-escation-automatic-action.md
+    - Logs e auditoria:
+      - 4biz-helium/platform-administration/logs-and-auditing/audit040-configure.md
+      - 4biz-helium/platform-administration/logs-and-auditing/system-log.md
+  - Tracker:
+    - 4biz-helium/tracker/overview.md
+    - Criar um fluxo de trabalho:
+      - 4biz-helium/tracker/use/create-flow.md
+      - 4biz-helium/tracker/use/user-task-configure.md
+    - Expressões:
+      - 4biz-helium/tracker/configuration/expressions.md
+      - 4biz-helium/tracker/configuration/expressions-creator.md
+    - Modelagem de processo:
+      - 4biz-helium/tracker/use/modeling.md
+  - Processos:
+    - 4biz-helium/processes/overview.md
+#    - 4biz-helium/processes/configuration-steps.md
+    - Portfólio e catálogo:
+      - 4biz-helium/processes/portfolio-and-catalog/overview.md
+      - 4biz-helium/processes/portfolio-and-catalog/use/create-the-portfolio.md
+      - 4biz-helium/processes/portfolio-and-catalog/use/portfolio-maintenance.md
+      - Cadastrar um serviço:
+        - 4biz-helium/processes/portfolio-and-catalog/use/register-a-service.md
+        - Configurar requisição:
+          - 4biz-helium/processes/portfolio-and-catalog/use/register-service-activity.md
+        - Configurar contrato:
+          - 4biz-helium/processes/portfolio-and-catalog/use/service-contract-attributes.md
+          - 4biz-helium/processes/portfolio-and-catalog/use/link-activity-to-service-contract.md
+        - Cadastrar atributo:
+          - 4biz-helium/processes/portfolio-and-catalog/use/configure-services-attributes.md
+          - 4biz-helium/processes/portfolio-and-catalog/use/create-service-map.md
+        - Utilizar o Smart Portal:
+          - 4biz-helium/processes/portfolio-and-catalog/use/smart-portal.md
+          - 4biz-helium/processes/portfolio-and-catalog/use/request-through-Smart-Portal.md
+        - Gerar relatórios:
+          - 4biz-helium/processes/portfolio-and-catalog/use/reports-service-catalog.md
+        - Verificar auditoria:
+          - 4biz-helium/processes/portfolio-and-catalog/use/service-audit.md
+        - Ferramentas de Notificação:
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-news.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-satisfaction-survey.md
+        - Configuração:
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/access-portfolio-management.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-contract.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-operating-condition.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-type-of-service.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/create-service-category.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-service-template.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-business-process.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-cause-incidents.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-company.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-client.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-provider.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-news-category.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-solution-category.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-request-justification.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-priority.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-service-request-priority.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/register-skill-resource.md
+          - 4biz-helium/processes/portfolio-and-catalog/configuration/send-email-reclassified-ticket.md
+#      - Fluxo:
+#        - 4biz-helium/processes/portfolio-and-catalog/flow/flow.md
+    - Nível de Serviço:
+      - 4biz-helium/processes/service-level/overview.md
+      - 4biz-helium/processes/service-level/use/create-time-attendance.md
+      - 4biz-helium/processes/service-level/use/service-level-requirement.md
+      - 4biz-helium/processes/service-level/use/service-level-agreement.md
+      - 4biz-helium/processes/service-level/use/improvement-plan.md
+      - Relatórios:
+        - 4biz-helium/processes/service-level/use/contract-evaluation.md
+        - 4biz-helium/processes/service-level/use/provider-evaluation.md
+        - 4biz-helium/processes/service-level/use/SLA-evaluation.md
+        - 4biz-helium/processes/service-level/use/reports-service-level-management.md
+    - Tickets:
+      - 4biz-helium/processes/tickets/overview.md
+      - Área de trabalho:
+        - 4biz-helium/processes/tickets/use/desktop-of-service-desk.md
+        - 4biz-helium/processes/tickets/use/locate-a-ticket.md
+        - 4biz-helium/processes/tickets/use/search-ticket-in-the-advanced-mode.md
+      - Criar um ticket:
+        - 4biz-helium/processes/tickets/use/create-ticket.md
+        - 4biz-helium/processes/tickets/use/register-ticket-via-template.md
+        - 4biz-helium/processes/tickets/configuration/create-then-close-ticket.md
+        - 4biz-helium/processes/tickets/configuration/create-ticket-receiving-email.md
+      - Aprovar um ticket:
+        - 4biz-helium/processes/tickets/use/approve-a-ticket.md
+        - 4biz-helium/processes/tickets/configuration/approve-request-via-email.md
+      - Atender um ticket:
+        - Capturar um ticket:
+          - 4biz-helium/processes/tickets/use/capture-ticket.md
+          - 4biz-helium/processes/tickets/use/register-ticket-occurrences.md
+          - 4biz-helium/processes/tickets/use/direct-the-ticket.md
+          - 4biz-helium/processes/tickets/use/link-other-functionalities-to-the-ticket.md
+          - 4biz-helium/processes/tickets/use/create-and-view-sub-request.md
+          - 4biz-helium/processes/tickets/use/attend-with-remote-support.md
+          - 4biz-helium/processes/tickets/use/hierarchical-escalation-in-the-attendance.md
+          - 4biz-helium/processes/tickets/use/register-ticket-execution.md
+          - 4biz-helium/processes/tickets/use/validate-ticket.md
+          - 4biz-helium/processes/tickets/use/cancel-ticket.md
+        - Selecionar opções:
+          - 4biz-helium/processes/tickets/use/change-SLA-of-a-ticket.md
+          - 4biz-helium/processes/tickets/use/delegate-ticket.md
+          - 4biz-helium/processes/tickets/use/print-ticket.md
+          - 4biz-helium/processes/tickets/use/reactivate-a-ticket-suspended.md
+          - 4biz-helium/processes/tickets/use/reclassify-ticket.md
+          - 4biz-helium/processes/tickets/use/register-ticket-related.md
+          - 4biz-helium/processes/tickets/use/schedule-ticket-activity.md
+          - 4biz-helium/processes/tickets/use/suspend-and-reactivate-tickets.md
+          - 4biz-helium/processes/tickets/use/suspend-ticket.md
+          - 4biz-helium/processes/tickets/use/verify-my-tickets.md
+      - Reabrir um ticket:
+        - 4biz-helium/processes/tickets/use/reopen-ticket.md
+      - Gerenciar equipes:
+        - 4biz-helium/processes/tickets/use/manage-a-ticket-with-Kanban.md
+      - Relatórios e pesquisas:
+        - 4biz-helium/processes/tickets/use/analyse-service-request-trends.md
+        - 4biz-helium/processes/tickets/use/analyze-event-trends.md
+        - 4biz-helium/processes/tickets/use/audit-a-ticket.md
+        - 4biz-helium/processes/tickets/use/generate-reports-tickets.md
+        - 4biz-helium/processes/tickets/use/generate-report-through-the-panel-of-charts.md
+      - Regra de escalonamento:
+        - 4biz-helium/processes/tickets/use/create-escalation-rule.md
+      - Configuração:
+        - 4biz-helium/processes/tickets/configuration/access-ticket-management.md
+        - 4biz-helium/processes/tickets/use/register-ticket-source.md
+        - 4biz-helium/processes/tickets/configuration/create-template-of-ticket.md
+        - 4biz-helium/processes/tickets/configuration/notification-delegated-email-ticket.md
+        - 4biz-helium/processes/tickets/configuration/relate-group-to-contract.md
+        - 4biz-helium/processes/tickets/configuration/relate-unit-to-contract.md
+#      - Fluxo:
+#        - 4biz-helium/processes/tickets/flow/flow.md
+    - Conhecimento:
+      - 4biz-helium/processes/knowledge/overview.md
+      - Portal do conhecimento:
+        - 4biz-helium/processes/knowledge/use/knowledge-portal.md
+        - 4biz-helium/processes/knowledge/use/display-tags-on-knowledge-portal.md
+        - 4biz-helium/processes/knowledge/configuration/refine-search-knowledge-portal.md
+        - 4biz-helium/processes/knowledge/use/review-reviews.md
+      - 4biz-helium/processes/knowledge/use/create-knowledge.md
+      - 4biz-helium/processes/knowledge/use/generate-reports-knowledge-management.md
+      - Configuração:
+        - 4biz-helium/processes/knowledge/configuration/create-folder.md
+        - Imagens:
+          - 4biz-helium/processes/knowledge/configuration/register-image-category.md
+          - 4biz-helium/processes/knowledge/configuration/store-images-gallery.md
+        - 4biz-helium/processes/knowledge/configuration/register-subject.md
+        - 4biz-helium/processes/knowledge/configuration/register-synonym.md
+        - 4biz-helium/processes/knowledge/configuration/configure-external-access-knowledge-portal.md
+        - 4biz-helium/processes/knowledge/use/index-knowledge.md
+        - 4biz-helium/processes/knowledge/configuration/notify-responsible-knowledge-expiration.md
+#      - Fluxo:
+#        - 4biz-helium/processes/knowledge/flow/flow.md
+    - Problema:
+      - 4biz-helium/processes/problem/overview.md
+      - 4biz-helium/processes/problem/use/register-problem.md
+      - 4biz-helium/processes/problem/use/advanced-search-for-problem.md
+      - Analisar um problema:
+        - 4biz-helium/processes/problem/use/problem-execution.md
+        - 4biz-helium/processes/problem/use/problem-occurrences.md
+        - 4biz-helium/processes/problem/use/schedule-problem-activities.md
+        - 4biz-helium/processes/problem/use/suspend-problem.md
+        - 4biz-helium/processes/problem/use/cancel-problem.md
+        - 4biz-helium/processes/problem/use/relate-information-to-problem.md
+      - 4biz-helium/processes/problem/use/generate-reports-problem-management.md
+      - Configuração:
+        - 4biz-helium/processes/problem/configuration/problem-portfolio.md
+        - 4biz-helium/processes/problem/configuration/problem-justification.md
+    - Mudança:
+      - 4biz-helium/processes/change/overview.md
+      - Cadastrar uma mudança:
+        - 4biz-helium/processes/change/use/register-change.md
+        - 4biz-helium/processes/change/use/register-change-via-template.md
+      - Tratar mudança:
+        - 4biz-helium/processes/change/use/relate-information-to-change.md
+        - 4biz-helium/processes/change/use/change-planning-activities.md
+        - 4biz-helium/processes/change/use/change-occurrences.md
+        - 4biz-helium/processes/change/use/change-reversion-plan.md
+        - 4biz-helium/processes/change/use/change-approval.md
+        - 4biz-helium/processes/change/use/cancel-change.md
+        - 4biz-helium/processes/change/use/suspend-change.md
+        - 4biz-helium/processes/change/use/execute-change.md
+      - Relatórios e pesquisas:
+        - 4biz-helium/processes/change/use/advanced-search-for-change.md
+        - 4biz-helium/processes/change/use/generate-reports-change-management.md
+        - 4biz-helium/processes/change/use/generate-reports-charts-panel-change.md
+        - 4biz-helium/processes/change/use/change-additional-reports.md
+      - Configuração:
+        - 4biz-helium/processes/change/configuration/change-portfolio.md
+        - 4biz-helium/processes/change/configuration/change-justification.md
+        - 4biz-helium/processes/change/configuration/change-schedule.md
+        - 4biz-helium/processes/change/configuration/change-template.md
+    - Liberação:
+      - 4biz-helium/processes/release/overview.md
+      - Área de trabalho:
+        - 4biz-helium/processes/release/use/release-desktop.md
+        - 4biz-helium/processes/release/use/advanced-search-for-release.md
+      - Tratar a liberação:
+        - 4biz-helium/processes/release/use/register-release-request.md
+        - 4biz-helium/processes/release/use/release-planning-activities.md
+        - 4biz-helium/processes/release/use/execute-release.md
+        - 4biz-helium/processes/release/use/relate-information-to-release.md
+        - 4biz-helium/processes/release/use/deployment-release-activities.md
+        - 4biz-helium/processes/release/use/suspend-release.md
+        - 4biz-helium/processes/release/use/reopen-release.md
+        - 4biz-helium/processes/release/use/cancel-release.md
+      - Configuração:
+        - 4biz-helium/processes/release/configuration/release-portfolio.md
+        - 4biz-helium/processes/release/use/release-justification.md
+    - Configuração e ativos:
+      - 4biz-helium/processes/configuration/overview.md
+      - Criar CMDB:
+        - IC:
+          - 4biz-helium/processes/configuration/use/search-CI.md
+          - 4biz-helium/processes/configuration/use/register-CI.md
+          - 4biz-helium/processes/configuration/use/change-IC-item-data.md
+          - 4biz-helium/processes/configuration/use/link-demand-attributes-to-CI.md
+          - 4biz-helium/processes/configuration/use/link-SLA-to-CI-group.md
+          - 4biz-helium/processes/configuration/use/CI-history.md
+          - 4biz-helium/processes/configuration/use/verify-status-inventory.md
+          - 4biz-helium/processes/configuration/use/CI-processes-related.md
+          - 4biz-helium/processes/configuration/use/configuration-item-impact.md
+          - 4biz-helium/processes/configuration/use/link-calendar-to-group-of-IC.md
+          - 4biz-helium/processes/configuration/use/run-script-of-CI.md
+          - 4biz-helium/processes/configuration/use/cost-per-hour-unavailability.md
+          - 4biz-helium/processes/configuration/use/create-ic-relationship.md
+          - 4biz-helium/processes/configuration/use/view-ci-relationship-map.md
+          - 4biz-helium/processes/configuration/use/export-CMDB.md
+        - Grupos:
+          - 4biz-helium/processes/configuration/configuration/register-configuration-item-group.md
+          - 4biz-helium/processes/configuration/use/delete-group-of-IC.md
+          - 4biz-helium/processes/configuration/use/change-group-configuration-item.md
+        - Alertas:
+          - 4biz-helium/processes/configuration/use/CI-captured-by-inventory.md
+      - Relatórios:
+        - 4biz-helium/processes/configuration/use/generate-report-configuration-management.md
+        - 4biz-helium/processes/configuration/use/generate-reports-charts-panel-ic.md
+      - Mídia defitiva:
+        - 4biz-helium/processes/configuration/configuration/register-definitive-media.md
+      - Configuração:
+        - IC:
+          - 4biz-helium/processes/configuration/configuration/register-characteristics.md
+          - 4biz-helium/processes/configuration/configuration/register-type-ic.md
+          - 4biz-helium/processes/configuration/configuration/create-configuration-item-related-ic.md
+        - 4biz-helium/processes/configuration/configuration/create-type-relationship-ci.md
+        - 4biz-helium/processes/configuration/configuration/configure-remote-access.md
+        - 4biz-helium/processes/configuration/configuration/register-financial-value-ic.md
+        - 4biz-helium/processes/configuration/configuration/register-software-blacklist.md
+        - 4biz-helium/processes/configuration/configuration/inventory-mib.md
+    - Eventos:
+      - 4biz-helium/processes/event/overview.md
+      - Central de Eventos:
+        - 4biz-helium/processes/event/use/the-event-center.md
+        - 4biz-helium/processes/event/use/search-event.md
+      - Tratar um evento:
+        - 4biz-helium/processes/event/use/view-event.md
+        - 4biz-helium/processes/event/use/internal-menu-of-event.md
+        - Selecionar opções:
+          - 4biz-helium/processes/event/use/close-event-occurrence.md
+          - 4biz-helium/processes/event/use/close-occurences-and-actions.md
+          - 4biz-helium/processes/event/use/create-ticket-from-an-event.md
+          - 4biz-helium/processes/event/use/create-change-from-an-event.md
+          - 4biz-helium/processes/event/use/create-a-problem-from-an-event.md
+      - Relatórios:
+        - 4biz-helium/processes/event/use/register-event-audit.md
+        - 4biz-helium/processes/event/use/generate-reports-event-management.md
+      - Configuração:
+        - Gerente:
+          - 4biz-helium/processes/event/configuration/register-nagios-generic-manager.md
+          - 4biz-helium/processes/event/configuration/register-nagios-manager.md
+          - 4biz-helium/processes/event/configuration/register-inventory-manager.md
+          - 4biz-helium/processes/event/configuration/register-zabbix-generic-manager.md
+          - 4biz-helium/processes/event/configuration/register-zabbix-manager.md
+          - 4biz-helium/processes/event/configuration/register-global-manager.md
+        - Conexão:
+          - 4biz-helium/processes/event/configuration/set-inventory-connection.md
+          - 4biz-helium/processes/event/configuration/register-event-monitor-connection.md
+          - 4biz-helium/processes/event/configuration/register-nagios-zabbix-connection.md
+        - Notificação:
+          - 4biz-helium/processes/event/configuration/register-notification-recipient.md
+          - 4biz-helium/processes/event/configuration/register-event-notification.md
+        - 4biz-helium/processes/event/configuration/register-epl-template.md
+        - 4biz-helium/processes/event/configuration/register-occurence-category.md
+        - 4biz-helium/processes/event/configuration/register-time.md
+    - Disponibilidade:
+      - 4biz-helium/processes/availability/overview.md
+      - Verificar disponibilidade:
+        - 4biz-helium/processes/availability/use/CI-group-availability.md
+        - 4biz-helium/processes/availability/use/availability-group.md
+        - 4biz-helium/processes/availability/use/service-availability.md
+        - 4biz-helium/processes/availability/use/configuration-item-availability.md
+      - Configuração:
+        - 4biz-helium/processes/availability/configuration/register-availability-group.md
+    - Demanda:
+      - 4biz-helium/processes/demand/overview.md
+      - Cadastrar atributo:
+        - 4biz-helium/processes/demand/use/import-demand-attibute-data.md
+        - 4biz-helium/processes/demand/use/register-demand-attribute.md
+    - Capacidade:
+      - 4biz-helium/processes/capacity/overview.md
+      - Cadastrar indidcadores:
+        - 4biz-helium/processes/capacity/use/capacity-indicators-data.md
+        - 4biz-helium/processes/capacity/use/register-capacity-indicators.md
+    - Continuidade:
+      - 4biz-helium/processes/continuity/overview.md
+      - 4biz-helium/processes/continuity/use/register-service-continuity.md
+      - Detalhar continuidade:
+        - Iniciação:
+          - 4biz-helium/processes/continuity/use/continuity-policy.md
+          - 4biz-helium/processes/continuity/use/service-continuity-scope.md
+          - 4biz-helium/processes/continuity/use/service-continuity-project.md
+        - Requisitos e estratégia:
+          - 4biz-helium/processes/continuity/use/continuity-vital-functions.md
+          - 4biz-helium/processes/continuity/use/impact-analysis-continuity-business.md
+          - 4biz-helium/processes/continuity/use/continuity-risk-evaluation.md
+          - 4biz-helium/processes/continuity/use/service-continuity-strategy.md
+        - Implementação:
+          - 4biz-helium/processes/continuity/use/continuity-plan.md
+          - 4biz-helium/processes/continuity/use/continuity-organizational-planning.md
+          - 4biz-helium/processes/continuity/use/continuity-test-registration.md
+        - Operação contínua:
+          - 4biz-helium/processes/continuity/use/continuity-awareness.md
+          - 4biz-helium/processes/continuity/use/review-and-audit-continuity.md
+          - 4biz-helium/processes/continuity/use/continuity-test-calendar.md
+          - 4biz-helium/processes/continuity/use/invoke-continuity.md
+      - Configuração:
+        - 4biz-helium/processes/continuity/configuration/access-continuity-management.md
+        - Cadastrar ameaça:
+          - 4biz-helium/processes/continuity/configuration/register-threat.md
+          - 4biz-helium/processes/continuity/configuration/threat-category.md
+        - Cadastrar Risco:
+          - 4biz-helium/processes/continuity/configuration/register-continuity-risk.md
+          - 4biz-helium/processes/continuity/configuration/risk-category.md
+        - 4biz-helium/processes/continuity/configuration/continuity-template.md
+  - Recursos adicionais:
+    - Introdução:
+      - 4biz-helium/additional-features/introduction.md
+    - Views:
+      - 4biz-helium/additional-features/metadata-technical-view-report.md
+    - Racer 4Biz:
+      - 4biz-helium/additional-features/racer-4biz-app/racer-homescreen.md
+      - 4biz-helium/additional-features/racer-4biz-app/all-tickets-filter.md
+      - 4biz-helium/additional-features/racer-4biz-app/my-tickets-filters.md
+      - 4biz-helium/additional-features/racer-4biz-app/ticket-status-racer.md
+      - 4biz-helium/additional-features/racer-4biz-app/create-ticket-racer.md
+      - 4biz-helium/additional-features/racer-4biz-app/more-options.md
+    - Tasker agile management:
+      - 4biz-helium/additional-features/project-management/tasker-agile-management/tasker-agile-management.md
+    - Portal de Serviço:
+      - Centro de Experiência:
+        - 4biz-helium/additional-features/service-portals/experience-center/overview.md
+        - 4biz-helium/additional-features/service-portals/experience-center/create-experience-center.md
+    - Gestão de contrato:
+      - Uso:
+        - 4biz-helium/additional-features/contract-management/use/manage-contracts.md
+        - 4biz-helium/additional-features/contract-management/use/register-contract.md
+        - 4biz-helium/additional-features/contract-management/use/service-work-order.md
+      - Configuração:
+        - 4biz-helium/additional-features/contract-management/configuration/export-contract-data.md
+        - 4biz-helium/additional-features/contract-management/configuration/import-contract-data.md
+        - 4biz-helium/additional-features/contract-management/configuration/register-currency.md
+        - 4biz-helium/additional-features/contract-management/configuration/register-formula.md
+        - 4biz-helium/additional-features/contract-management/configuration/register-subscription.md
+        - 4biz-helium/additional-features/contract-management/configuration/subscription-group.md
+        - 4biz-helium/additional-features/contract-management/configuration/work-order-formula.md
+    - Comunicação e notificação:
+      - Chat:
+        - 4biz-helium/additional-features/communication-and-notification/chat/chat.md
+      - Omnichannel:
+        - 4biz-helium/additional-features/communication-and-notification/omnichannel/omnichannel-integration-facebook.md
+        - 4biz-helium/additional-features/communication-and-notification/omnichannel/omnichannel-integration-twitter.md
+        - 4biz-helium/additional-features/communication-and-notification/omnichannel/omnichannel-integration-whatsapp.md
+      - E-mail:
+        - 4biz-helium/additional-features/communication-and-notification/email/register-email-notification.md
+      - Notificação:
+        - Configuração:
+          - 4biz-helium/additional-features/communication-and-notification/notification/configuration/enable-messaging-within-4biz.md
+          - 4biz-helium/additional-features/communication-and-notification/notification/configuration/template-create.md
+          - 4biz-helium/additional-features/communication-and-notification/notification/configuration/sound-notification.md
+        - Uso:
+          - 4biz-helium/additional-features/communication-and-notification/notification/use/notification.md
+    - Gestão de projeto:
+      - Configuração:
+        - 4biz-helium/additional-features/project-management/project-management/configuration/register-role.md
+      - Uso:
+        - 4biz-helium/additional-features/project-management/project-management/use/manage-my-tasks.md
+        - 4biz-helium/additional-features/project-management/project-management/use/register-project.md
+    - Relatórios:
+      - Apresentação:
+        - 4biz-helium/additional-features/reports/configuration/configuration.md
+      - Dashboard:
+        - Uso:
+          - 4biz-helium/additional-features/reports/create/dashboard/use/create-template.md
+          - 4biz-helium/additional-features/reports/create/dashboard-customize-management-panel-smart-decision.md
+        - Configuração:
+          - 4biz-helium/additional-features/reports/create/dashboard/configuration/define-metrics-kpis.md
+        - Criar:
+          - 4biz-helium/additional-features/reports/create/smart-reports/configuration/build-maintain-smart-report.md
+          - 4biz-helium/additional-features/reports/create/smart-reports/configuration/configure-report-view-attendance-data.md
+          - 4biz-helium/additional-features/reports/create/smart-reports/configuration/create-smart-report.md
+          - 4biz-helium/additional-features/reports/create/smart-reports/configuration/smart-report.md
+      - Gerais:
+        - 4biz-helium/additional-features/reports/use/cost-of-unavailability.md
+        - 4biz-helium/additional-features/reports/use/generate-reports-personnel-management.md
+        - 4biz-helium/additional-features/reports/use/yield-control-employee.md
+      - Surveys e feedback:
+        - 4biz-helium/additional-features/surveys-and-feedback/register-degree-attendance-satisfaction.md
+        - 4biz-helium/additional-features/surveys-and-feedback/surveys-and-feedback.md
+      - Smart Analytics:
+        - 4biz-helium/additional-features/smart-analytics/use-bi-solution.md
+      - Redes Sociais:
+        - 4biz-helium/additional-features/social-network/create-ticket-twitter.md
+    - Add-ons:
+      - 4biz-helium/additional-features/add-ons/event-monitor.md
+      - 4biz-helium/additional-features/add-ons/inventory.md
+      - 4biz-helium/additional-features/add-ons/remote-access.md
+      - Automação das operações:
+        - Configuração:
+          - 4biz-helium/additional-features/automation-of-operation/configuration/activity-suspension.md
+          - 4biz-helium/additional-features/automation-of-operation/configuration/periodic-activity-group.md
+        - Uso:
+          - 4biz-helium/additional-features/automation-of-operation/use/register-periodic-activity.md
+          - 4biz-helium/additional-features/automation-of-operation/use/scheduled-periodic-activities.md
+#  - Fast Deployment Methodology:
+#    - 4biz-helium/fdm/fdm.md
+- Builder:
+  - Visão Geral:
+    - builder/overview.md
+    - builder/enable-builder.md
+  - Desenvolvendo Aplicações:
+    - builder/developing-applications/introduction.md
+    - builder/developing-applications/business-object.md
+    - builder/developing-applications/database-connection.md
+    - builder/developing-applications/domain.md
+    - builder/developing-applications/form.md
+    - builder/developing-applications/internationalization.md
+    - builder/developing-applications/builder-application.md
+    - builder/developing-applications/builder-elements.md
+  - Usando no 4biz:
+    - builder/using-builder-sm/sm-menu.md
+    - builder/using-builder-sm/tickets.md
+    - builder/using-builder-sm/experience-center.md
+  - Opções Avançadas:
+    - builder/advanced-options/business-rules.md
+    - builder/advanced-options/css.md
+    - builder/advanced-options/database.md
+    - builder/advanced-options/package.md
+    - builder/advanced-options/parameters.md
+    - builder/advanced-options/report-file.md
+    - builder/advanced-options/report-setup.md
+    - builder/advanced-options/service-integration-flow.md
+    - builder/advanced-options/type-of-data.md
+  - Add-Ons:
+    - builder/addons/addons-list.md
+#  - Dicionário de Banco de Dados:
+#    - builder/database-dictionary.md
+  - Builder FAQ:
+    - builder/builder-faq.md
+- Helper:
+  - helper/what_is_helper.md
+  - helper/dialogues.md
+  - helper/create_edit_intent.md
+  - helper/skills.md
+  - helper/themes.md
+  - helper/context.md
+  - helper/analytics.md
+  - helper/third_party_API.md
+  - helper/integrations.md
+  - helper/trainings.md
+  - helper/users.md
+  - helper/settings.md
+- FAQ:
+  - faq.md
+  - glossary.md
+# - contribute.md
